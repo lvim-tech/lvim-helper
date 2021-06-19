@@ -16,12 +16,13 @@ M.settings = {
         winfixheight = true,
         foldenable = false,
         spell = false,
-        signcolumn = 'yes',
+        signcolumn = 'no',
         foldmethod = 'manual',
         foldcolumn = '0',
         cursorcolumn = false,
         colorcolumn = '0',
-        wrap = false
+        wrap = false,
+        winhl = table.concat({'Normal:LvimHelperNormal'}, ',')
     },
     bufopts = {
         swapfile = false,
