@@ -1,3 +1,6 @@
+local api = vim.api
+local settings = require 'lvim-helper.settings'
+
 local M = {}
 
 function M.merge(t1, t2)
@@ -47,6 +50,12 @@ function M.readlines(filename)
     for line in f:lines() do table.insert(res, line) end
     f:close()
     return res
+end
+
+function M.size_of_table_files()
+    size = 0
+    for _ in pairs(settings.settings.files) do size = size + 1 end
+    return size
 end
 
 -- function is_file_in_table(file)

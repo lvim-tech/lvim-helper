@@ -3,31 +3,28 @@ local settings = require 'lvim-helper.settings'
 local win = require 'lvim-helper.win'
 local buf = require 'lvim-helper.buf'
 local render = require 'lvim-helper.render'
+local utils = require 'lvim-helper.utils'
 
 local M = {}
 
 function M.next()
-    local number_of_files = size_of_table_files()
+    local number_of_files = utils.size_of_table_files()
     settings.settings.current_file = settings.settings.current_file + 1
     if settings.settings.current_file > number_of_files then
         settings.settings.current_file = 1
     end
-    render.render(settings.settings.files[settings.settings.current_file])
+    render.render(settings.settings.files[settings.settings.current_file],
+                  settings.settings.current_file, number_of_files)
 end
 
 function M.prev()
-    local number_of_files = size_of_table_files()
+    local number_of_files = utils.size_of_table_files()
     settings.settings.current_file = settings.settings.current_file - 1
     if settings.settings.current_file < 1 then
         settings.settings.current_file = number_of_files
     end
-    render.render(settings.settings.files[settings.settings.current_file])
-end
-
-function size_of_table_files()
-    size = 0
-    for _ in pairs(settings.settings.files) do size = size + 1 end
-    return size
+    render.render(settings.settings.files[settings.settings.current_file],
+                  settings.settings.current_file, number_of_files)
 end
 
 local keypress_funcs = {

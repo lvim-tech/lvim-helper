@@ -20,11 +20,12 @@ M.settings = {
         foldmethod = 'manual',
         foldcolumn = '0',
         cursorcolumn = false,
-        colorcolumn = '0'
+        colorcolumn = '0',
+        wrap = false
     },
     bufopts = {
         swapfile = false,
-        buftype = '',
+        buftype = 'nofile',
         modifiable = false,
         filetype = 'LvimHelper',
         bufhidden = 'hide'

@@ -8,8 +8,7 @@ local buf = require 'lvim-helper.buf'
 local M = {}
 
 function M.setup(_settings)
-    settings.settings = utils.merge(settings.settings, _settings) --
-    buf.init()
+    settings.settings = utils.merge(settings.settings, _settings)
 end
 
 function M.toggle()
