@@ -10,8 +10,9 @@ function M.render(file, num, all)
         lines[k] = '  ' .. lines[k] --
     end
     vim.api.nvim_buf_set_option(settings.settings.buf, 'modifiable', true)
-    api.nvim_buf_set_lines(buf, 0, 0, false,
-                           {'  ***** ' .. num .. ' / ' .. all .. ' *****  '})
+    api.nvim_buf_set_lines(buf, 0, 0, false, {
+        '  ***** Helper ' .. num .. ' / ' .. all .. ' *****  '
+    })
     api.nvim_buf_set_lines(buf, 1, 1, false, {' '})
     api.nvim_buf_set_lines(settings.settings.buf, 2, -1, false, lines)
     vim.api.nvim_buf_set_option(settings.settings.buf, 'modifiable', false)
