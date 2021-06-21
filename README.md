@@ -10,7 +10,7 @@
 
 ## Screenshot
 
-![LvimHelper.png](https://github.com/lvim-tech/lvim-helper/blob/master/media/LvimHelper.png)
+![LvimHelper.png](https://github.com/lvim-tech/lvim-helper/blob/main/media/LvimHelper.png)
 
 ## Requirements
 
