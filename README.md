@@ -45,11 +45,11 @@ require('lvim-helper').setup({
 
 ## Keymaps
 
-| Key     | Description   |
-| ------- | ------------- |
-| `]`     | Next file     |
-| `[`     | Previous file |
-| `<Esc>` | Quit          |
+| Key | Description   |
+| --- | ------------- |
+| `]` | Next file     |
+| `[` | Previous file |
+| `q` | Quit          |
 
 > If you want custom keysmaps:
 
