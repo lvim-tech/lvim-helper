@@ -1,9 +1,7 @@
-local va = vim.api
 local settings = require 'lvim-helper.settings'
 local utils = require 'lvim-helper.utils'
 local actions = require 'lvim-helper.actions'
 local win = require 'lvim-helper.win'
-local buf = require 'lvim-helper.buf'
 
 local M = {}
 

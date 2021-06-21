@@ -1,4 +1,3 @@
-local api = vim.api
 local settings = require 'lvim-helper.settings'
 
 local M = {}
@@ -44,8 +43,8 @@ end
 
 function M.readlines(filename)
     M.assert_string(1, filename)
-    local f, err = io.open(filename, 'r')
-    if not f then return raise(err) end
+    local f = io.open(filename, 'r')
+    if not f then return end
     local res = {}
     for line in f:lines() do table.insert(res, line) end
     f:close()

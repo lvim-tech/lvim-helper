@@ -1,7 +1,5 @@
-local api = vim.api
 local settings = require 'lvim-helper.settings'
 local win = require 'lvim-helper.win'
-local buf = require 'lvim-helper.buf'
 local render = require 'lvim-helper.render'
 local utils = require 'lvim-helper.utils'
 
@@ -34,7 +32,7 @@ local keypress_funcs = {
 }
 
 function M.on_keypress(mode)
-    if keypress_funcs[mode] then return keypress_funcs[mode](node) end
+    if keypress_funcs[mode] then return keypress_funcs[mode]() end
 end
 
 function M.open() win.win_open() end
