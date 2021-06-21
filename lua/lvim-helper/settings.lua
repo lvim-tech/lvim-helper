@@ -1,9 +1,9 @@
 local M = {}
 
 M.settings = {
+    files = {},
     width = 80,
     side = 'right',
-    files = {},
     current_file = 1,
     win = nil,
     buf = nil,
