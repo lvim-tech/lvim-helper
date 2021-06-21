@@ -27,11 +27,15 @@ end
 
 function M.win_close()
     if not M.is_win_open() then return end
-    api.nvim_win_hide(buf.get_winnr())
+    api.nvim_win_hide(M.get_winnr())
 end
 
 function M.is_win_open()
-    return buf.get_winnr() ~= nil and api.nvim_win_is_valid(buf.get_winnr())
+    return M.get_winnr() ~= nil and api.nvim_win_is_valid(M.get_winnr())
+end
+
+function M.get_winnr()
+    return settings.settings.tabpages[api.nvim_get_current_tabpage()]
 end
 
 return M
