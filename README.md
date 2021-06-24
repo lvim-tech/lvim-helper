@@ -92,13 +92,6 @@ require('lvim-helper').setup({
         colorcolumn = '0',
         wrap = false,
         winhl = table.concat({'Normal:LvimHelperNormal'}, ',')
-    },
-    bufopts = {
-        swapfile = false,
-        buftype = 'nofile',
-        modifiable = false,
-        filetype = 'LvimHelper',
-        bufhidden = 'hide'
     }
 })
 ```
