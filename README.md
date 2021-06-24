@@ -90,8 +90,7 @@ require('lvim-helper').setup({
         foldcolumn = '0',
         cursorcolumn = false,
         colorcolumn = '0',
-        wrap = false,
-        winhl = table.concat({'Normal:LvimHelperNormal'}, ',')
+        wrap = false
     }
 })
 ```
