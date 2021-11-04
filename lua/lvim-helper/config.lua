@@ -1,9 +1,7 @@
-local M = {}
-
-M.settings = {
+local M = {
     files = {},
     width = 80,
-    side = 'right',
+    side = "right",
     current_file = 1,
     win = nil,
     buf = nil,
@@ -16,20 +14,20 @@ M.settings = {
         winfixheight = true,
         foldenable = false,
         spell = false,
-        signcolumn = 'no',
-        foldmethod = 'manual',
-        foldcolumn = '0',
+        signcolumn = "no",
+        foldmethod = "manual",
+        foldcolumn = "0",
         cursorcolumn = false,
-        colorcolumn = '0',
+        colorcolumn = "0",
         wrap = false,
-        winhl = table.concat({'Normal:LvimHelperNormal'}, ',')
+        winhl = table.concat({"Normal:LvimHelperNormal"}, ",")
     },
     bufopts = {
         swapfile = false,
-        buftype = 'nofile',
+        buftype = "nofile",
         modifiable = false,
-        filetype = 'LvimHelper',
-        bufhidden = 'hide'
+        filetype = "LvimHelper",
+        bufhidden = "hide"
     }
 }
 
