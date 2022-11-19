@@ -16,6 +16,8 @@ function M.setup(user_config)
 		callback = function()
 			vim.schedule(function()
 				actions.update_layout(actions.dir)
+				actions.layout_hide()
+				actions.layout_show()
 			end)
 		end,
 		group = group,

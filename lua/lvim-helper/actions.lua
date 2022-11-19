@@ -191,13 +191,13 @@ end
 
 M.layout_show = function()
 	if M.open == false then
+		M.update_layout(M.dir)
 		M.open = true
 		if M.lvim_layout then
 			M.lvim_layout:show()
 		else
 			M.layout()
 		end
-		M.update_layout(M.dir)
 	end
 end
 
