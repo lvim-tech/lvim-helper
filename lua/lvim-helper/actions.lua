@@ -111,7 +111,7 @@ local create_menu = function()
 		M.scroll(4)
 	end, {})
 	M.lvim_menu:map("n", "<C-u>", function()
-		M.scroll(-4)
+		M.scroll(0)
 	end, {})
 	M.lvim_menu:map("n", "l", function()
 		M.lvim_layout:hide()
@@ -187,8 +187,6 @@ M.update_layout = function(dir)
 			}),
 		}, { dir = "col" }))
 	end
-	-- M.layout_hide()
-	-- M.layout_show()
 end
 
 M.layout_show = function()
