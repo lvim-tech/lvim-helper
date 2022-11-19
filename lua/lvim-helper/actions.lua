@@ -156,7 +156,7 @@ M.update_popup_content = function(item)
 end
 
 M.update_layout = function(dir)
-	if dir == "row" then
+	if M.open == true and dir == "row" then
 		M.lvim_layout:update(nui_layout.Box({
 			nui_layout.Box(M.lvim_menu, {
 				size = {
@@ -171,7 +171,7 @@ M.update_layout = function(dir)
 				},
 			}),
 		}, { dir = "row" }))
-	else
+	elseif M.open == true then
 		M.lvim_layout:update(nui_layout.Box({
 			nui_layout.Box(M.lvim_popup, {
 				size = {
@@ -197,6 +197,7 @@ M.layout_show = function()
 		else
 			M.layout()
 		end
+		M.update_layout(M.dir)
 	end
 end
 
