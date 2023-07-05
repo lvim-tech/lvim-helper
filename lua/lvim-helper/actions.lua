@@ -1,6 +1,7 @@
 local config = require("lvim-helper.config")
 local utils = require("lvim-helper.utils")
 local notify = require("notify")
+local nui_text = require("nui.text")
 local nui_popup = require("nui.popup")
 local nui_menu = require("nui.menu")
 local nui_layout = require("nui.layout")
@@ -40,8 +41,8 @@ local create_preview = function()
 			highlight = "LvimPopupBorder",
 			style = config.border_style_preview,
 			text = {
-				top = "PREVIEW",
-				top_align = "center",
+				top = nui_text("PREVIEW", "LvimSelectBorder"),
+				top_align = "left",
 			},
 		},
 		win_options = {
@@ -82,8 +83,8 @@ local create_menu = function()
 			highlight = "LvimSelectBorder",
 			style = config.border_style_menu,
 			text = {
-				top = "LVIM HELPER",
-				top_align = "center",
+				top = nui_text("LVIM HELPER", "LvimSelectBorder"),
+				top_align = "left",
 			},
 		},
 		win_options = {
