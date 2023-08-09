@@ -49,6 +49,7 @@ local create_preview = function()
 			winhighlight = "Normal:LvimPopupNormal",
 		},
 	})
+	vim.api.nvim_buf_set_option(M.lvim_popup.bufnr, "filetype", "LvimHelper")
 end
 
 local menu_content = function()
@@ -102,6 +103,7 @@ local create_menu = function()
 			M.update_popup_content(item.text)
 		end,
 	})
+	vim.api.nvim_buf_set_option(M.lvim_menu.bufnr, "filetype", "LvimHelper")
 	M.lvim_menu:map("n", "h", function()
 		M.help()
 	end, {})
